@@ -8,10 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Bread Dough Calculator</h1>
-        <p>Customize your bread recipes and scale them to perfection.</p>
+        <header>
+            <h1>Bread Dough Calculator</h1>
+            <p>Scale, customize, and perfect your bread recipes with ease.</p>
+        </header>
 
-        <!-- Input Section -->
+        <!-- Input Form -->
         <form id="breadForm">
             <div class="input-group">
                 <label for="doughWeight">Desired Dough Weight (g):</label>
@@ -19,17 +21,12 @@
             </div>
 
             <div class="input-group">
-                <label for="wwFlour">Whole Wheat Flour (%):</label>
-                <input type="number" id="wwFlour" placeholder="e.g., 30" required>
+                <label for="hydration">Final Hydration (%):</label>
+                <input type="number" id="hydration" placeholder="e.g., 70" required>
             </div>
 
             <div class="input-group">
-                <label for="ryeFlour">Rye Flour (%):</label>
-                <input type="number" id="ryeFlour" placeholder="e.g., 5" required>
-            </div>
-
-            <div class="input-group">
-                <label for="starter">Starter (%):</label>
+                <label for="starter">Starter Percentage (% of Dough):</label>
                 <input type="number" id="starter" placeholder="e.g., 25" required>
             </div>
 
@@ -38,26 +35,20 @@
                 <input type="number" id="starterHydration" placeholder="e.g., 100" required>
             </div>
 
-            <div class="input-group">
-                <label for="hydration">Final Hydration (%):</label>
-                <input type="number" id="hydration" placeholder="e.g., 70" required>
-            </div>
-
             <button type="submit">Calculate</button>
         </form>
 
         <!-- Results Section -->
-        <div id="results" class="hidden">
+        <section id="results" class="hidden">
             <h2>Results</h2>
-            <p>Whole Wheat Flour: <span id="wwFlourResult">-</span> g</p>
-            <p>Rye Flour: <span id="ryeFlourResult">-</span> g</p>
-            <p>Starter: <span id="starterResult">-</span> g</p>
+            <p>Flour: <span id="flourResult">-</span> g</p>
             <p>Water: <span id="waterResult">-</span> g</p>
+            <p>Starter: <span id="starterResult">-</span> g</p>
             <p>Salt (Default 2%): <span id="saltResult">-</span> g</p>
-        </div>
+        </section>
 
         <footer>
-            <p>Made by Bidur for bread enthusiasts. Bookmark your formula!</p>
+            <p>Made with ❤️ for bread enthusiasts. Bookmark your favorite formulas!</p>
         </footer>
     </div>
     <script src="script.js"></script>
