@@ -1,19 +1,42 @@
-function calculate() {
-    const flour = parseFloat(document.getElementById("flour").value);
-    const hydration = parseFloat(document.getElementById("hydration").value);
-    const salt = parseFloat(document.getElementById("salt").value);
-    const yeast = parseFloat(document.getElementById("yeast").value);
+document.getElementById('breadForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    if (!flour || !hydration || !salt || !yeast) {
-        alert("Please fill in all fields with valid numbers.");
+    // Input Values
+    const doughWeight = parseFloat(document.getElementById('doughWeight').value);
+    const wwFlour = parseFloat(document.getElementById('wwFlour').value);
+    const ryeFlour = parseFloat(document.getElementById('ryeFlour').value);
+    const starter = parseFloat(document.getElementById('starter').value);
+    const starterHydration = parseFloat(document.getElementById('starterHydration').value);
+    const hydration = parseFloat(document.getElementById('hydration').value);
+
+    // Validation
+    if (
+        isNaN(doughWeight) ||
+        isNaN(wwFlour) ||
+        isNaN(ryeFlour) ||
+        isNaN(starter) ||
+        isNaN(starterHydration) ||
+        isNaN(hydration)
+    ) {
+        alert('Please fill all fields with valid numbers.');
         return;
     }
 
-    const water = (hydration / 100) * flour;
-    const saltWeight = (salt / 100) * flour;
-    const yeastWeight = (yeast / 100) * flour;
+    // Calculations
+    const wwFlourWeight = (doughWeight * wwFlour) / 100;
+    const ryeFlourWeight = (doughWeight * ryeFlour) / 100;
+    const starterWeight = (doughWeight * starter) / 100;
+    const waterWeight =
+        (doughWeight * hydration) / 100 -
+        (starterWeight * starterHydration) / 100;
+    const saltWeight = (doughWeight * 2) / 100; // Default 2% salt
 
-    document.getElementById("water").innerText = water.toFixed(2);
-    document.getElementById("saltResult").innerText = saltWeight.toFixed(2);
-    document.getElementById("yeastResult").innerText = yeastWeight.toFixed(2);
-}
+    // Update Results
+    document.getElementById('wwFlourResult').textContent = wwFlourWeight.toFixed(2);
+    document.getElementById('ryeFlourResult').textContent = ryeFlourWeight.toFixed(2);
+    document.getElementById('starterResult').textContent = starterWeight.toFixed(2);
+    document.getElementById('waterResult').textContent = waterWeight.toFixed(2);
+    document.getElementById('saltResult').textContent = saltWeight.toFixed(2);
+
+    document.getElementById('results').classList.remove('hidden');
+});
