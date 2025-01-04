@@ -14,31 +14,31 @@ body {
 
 /* Container */
 .container {
-    max-width: 500px; /* Limit the width of the container */
-    width: 90%; /* Allow it to shrink on smaller screens */
+    max-width: 250px; /* Half the previous size */
+    width: 80%; /* Allow it to shrink on smaller screens */
     background-color: #1e1e1e; /* Slightly lighter dark background */
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px; /* Smaller padding */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 /* Header */
 header h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem; /* Reduced font size */
     margin-bottom: 10px;
     color: #ffcc00; /* Accent color for headings */
 }
 
 header p {
-    font-size: 1.1rem;
+    font-size: 0.9rem; /* Reduced font size */
     color: #cccccc;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 /* Input Form */
 .input-group {
-    margin: 20px 0;
+    margin: 15px 0;
     text-align: left;
     width: 100%; /* Ensure inputs take up full width of container */
 }
@@ -46,14 +46,14 @@ header p {
 label {
     display: block;
     margin-bottom: 5px;
-    font-size: 1.2rem;
+    font-size: 0.9rem; /* Reduced font size */
     color: #ffffff;
 }
 
 input {
     width: 100%; /* Make input fields responsive to the container */
-    padding: 12px;
-    font-size: 1rem;
+    padding: 8px; /* Reduced padding */
+    font-size: 0.9rem; /* Reduced font size */
     border: 1px solid #444;
     border-radius: 5px;
     background-color: #2a2a2a;
@@ -69,10 +69,10 @@ input:focus {
 
 button {
     width: 100%; /* Ensure button is responsive */
-    padding: 12px;
+    padding: 8px; /* Reduced padding */
     background-color: #ffcc00;
     color: #121212;
-    font-size: 1.2rem;
+    font-size: 0.9rem; /* Reduced font size */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -86,36 +86,36 @@ button:hover {
 
 /* Results Section */
 #results {
-    margin-top: 20px;
+    margin-top: 15px; /* Reduced margin */
     text-align: left;
 }
 
 #results h2 {
-    font-size: 1.8rem;
+    font-size: 1rem; /* Reduced font size */
     color: #ffcc00;
     margin-bottom: 10px;
 }
 
 #results p {
-    font-size: 1.2rem;
+    font-size: 0.9rem; /* Reduced font size */
     margin: 5px 0;
     color: #ffffff;
 }
 
 /* Footer */
 footer {
-    margin-top: 30px;
-    font-size: 0.9rem;
+    margin-top: 20px; /* Reduced margin */
+    font-size: 0.8rem; /* Reduced font size */
     color: #cccccc;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     header p, label, input, button, #results h2, #results p, footer {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
