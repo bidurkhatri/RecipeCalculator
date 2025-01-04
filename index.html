@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bread Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Bread Dough Calculator</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -12,45 +13,37 @@
             <h1>Bread Dough Calculator</h1>
             <p>Scale, customize, and perfect your bread recipes without any hassle!</p>
         </header>
-
-        <!-- Input Form -->
         <form id="breadForm">
             <div class="input-group">
                 <label for="doughWeight">Desired Dough Weight (g):</label>
                 <input type="number" id="doughWeight" placeholder="e.g., 1000" required>
             </div>
-
             <div class="input-group">
                 <label for="hydration">Final Hydration (%):</label>
                 <input type="number" id="hydration" placeholder="e.g., 70" required>
             </div>
-
             <div class="input-group">
                 <label for="starter">Starter Percentage (% of Dough):</label>
                 <input type="number" id="starter" placeholder="e.g., 25" required>
             </div>
-
             <div class="input-group">
                 <label for="starterHydration">Starter Hydration (%):</label>
                 <input type="number" id="starterHydration" placeholder="e.g., 100" required>
             </div>
-
             <button type="submit">Calculate</button>
         </form>
-
-        <!-- Results Section -->
-        <section id="results" class="hidden">
+        <div id="results" class="hidden">
             <h2>Results</h2>
-            <p>Flour: <span id="flourResult">-</span> g</p>
-            <p>Water: <span id="waterResult">-</span> g</p>
-            <p>Starter: <span id="starterResult">-</span> g</p>
-            <p>Salt (Default 2%): <span id="saltResult">-</span> g</p>
-        </section>
-
+            <p>Flour: <span id="flourResult">-</span></p>
+            <p>Water: <span id="waterResult">-</span></p>
+            <p>Starter: <span id="starterResult">-</span></p>
+            <p>Salt (Default 2%): <span id="saltResult">-</span></p>
+        </div>
         <footer>
             <p>Made by Bidur for bread enthusiasts. Bookmark your formula for future reference!</p>
         </footer>
     </div>
+    <!-- Link to the external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
