@@ -14,52 +14,54 @@ body {
 
 /* Container */
 .container {
-    max-width: 250px; /* Half the previous size */
-    width: 80%; /* Allow it to shrink on smaller screens */
+    max-width: 500px; /* Page width stays the same */
+    width: 90%;
     background-color: #1e1e1e; /* Slightly lighter dark background */
     border-radius: 10px;
-    padding: 10px; /* Smaller padding */
+    padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 /* Header */
 header h1 {
-    font-size: 1.5rem; /* Reduced font size */
+    font-size: 2.5rem;
     margin-bottom: 10px;
     color: #ffcc00; /* Accent color for headings */
 }
 
 header p {
-    font-size: 0.9rem; /* Reduced font size */
+    font-size: 1.1rem;
     color: #cccccc;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 /* Input Form */
 .input-group {
-    margin: 15px 0;
+    margin: 20px 0;
     text-align: left;
-    width: 100%; /* Ensure inputs take up full width of container */
+    width: 100%;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    font-size: 0.9rem; /* Reduced font size */
+    font-size: 1.2rem;
     color: #ffffff;
 }
 
 input {
-    width: 100%; /* Make input fields responsive to the container */
-    padding: 8px; /* Reduced padding */
-    font-size: 0.9rem; /* Reduced font size */
+    width: 50%; /* Half the size of the parent container */
+    padding: 12px;
+    font-size: 1rem;
     border: 1px solid #444;
     border-radius: 5px;
     background-color: #2a2a2a;
     color: #ffffff;
     outline: none;
     box-sizing: border-box; /* Include padding in width calculation */
+    margin: 0 auto; /* Center-align the input fields */
+    display: block; /* Ensure centering works */
 }
 
 input:focus {
@@ -68,16 +70,17 @@ input:focus {
 }
 
 button {
-    width: 100%; /* Ensure button is responsive */
-    padding: 8px; /* Reduced padding */
+    width: 50%; /* Same width as input fields for consistency */
+    padding: 12px;
     background-color: #ffcc00;
     color: #121212;
-    font-size: 0.9rem; /* Reduced font size */
+    font-size: 1.2rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 10px;
+    margin: 10px auto; /* Center-align the button */
+    display: block; /* Ensure centering works */
 }
 
 button:hover {
@@ -86,36 +89,36 @@ button:hover {
 
 /* Results Section */
 #results {
-    margin-top: 15px; /* Reduced margin */
+    margin-top: 20px;
     text-align: left;
 }
 
 #results h2 {
-    font-size: 1rem; /* Reduced font size */
+    font-size: 1.8rem;
     color: #ffcc00;
     margin-bottom: 10px;
 }
 
 #results p {
-    font-size: 0.9rem; /* Reduced font size */
+    font-size: 1.2rem;
     margin: 5px 0;
     color: #ffffff;
 }
 
 /* Footer */
 footer {
-    margin-top: 20px; /* Reduced margin */
-    font-size: 0.8rem; /* Reduced font size */
+    margin-top: 30px;
+    font-size: 0.9rem;
     color: #cccccc;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 
     header p, label, input, button, #results h2, #results p, footer {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
