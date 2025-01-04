@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bread Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bread Dough Calculator</h1>
+        <label for="flour">Flour (g):</label>
+        <input type="number" id="flour" placeholder="Enter flour weight" />
+
+        <label for="hydration">Hydration (%):</label>
+        <input type="number" id="hydration" placeholder="Enter hydration percentage" />
+
+        <label for="salt">Salt (%):</label>
+        <input type="number" id="salt" placeholder="Enter salt percentage" />
+
+        <label for="yeast">Yeast (%):</label>
+        <input type="number" id="yeast" placeholder="Enter yeast percentage" />
+
+        <button onclick="calculate()">Calculate</button>
+
+        <h3>Results:</h3>
+        <p>Water (g): <span id="water">-</span></p>
+        <p>Salt (g): <span id="saltResult">-</span></p>
+        <p>Yeast (g): <span id="yeastResult">-</span></p>
+    </div>
+
+    <footer>
+        <p>Created with ❤️ for bread enthusiasts.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
